@@ -4,6 +4,22 @@ The OBO format is used to describe ontologies, commonly used in biology. The for
 
 The parser (over)uses Enumerators to ensure that you can parse arbitrarily large files. I'm very happy to have feedback about the merits (or lack of merit) of this approach.
 
+## To use
+
+```ruby
+
+# To load an obo file
+ontology = Obo::Parser.new "doid.obo"
+
+# To get an enumerator of the elements
+elements = ontology.elements
+
+# To access attributes for the element
+header = elements.next
+term   = elements.next
+
+```
+
 ## Contributing to obo
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
