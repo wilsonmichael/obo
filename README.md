@@ -14,9 +14,13 @@ ontology = Obo::Parser.new "doid.obo"
 # To get an enumerator of the elements
 elements = ontology.elements
 
-# To access attributes for the element
+# Using the enumerator
 header = elements.next
 term   = elements.next
+
+# Accessing attributes of an element
+term.id 
+#=> "DOID:0014667"
 
 ```
 
