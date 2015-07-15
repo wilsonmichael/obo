@@ -1,10 +1,10 @@
 module Obo
   class Stanza
-    attr_reader :name
+    attr_reader :_element_type
     attr_reader :tagvalues
 
-    def initialize(name)
-      @name = name
+    def initialize(element_type)
+      @_element_type = element_type
       @tagvalues = Hash.new{|h,k| h[k] = []}
     end
 
