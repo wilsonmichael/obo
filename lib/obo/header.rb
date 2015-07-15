@@ -6,6 +6,10 @@ module Obo
       @tagvalues = Hash.new{|h,k| h[k] = []}
     end
 
+    def _element_type
+      "Header"
+    end
+
     def [](tag)
       values = @tagvalues[tag]
       values.length == 1 ? values.first : values
